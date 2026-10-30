@@ -365,6 +365,12 @@ img { max-width: 100%; height: auto; display: block; }
 .section { padding: 56px 22px; }
 .section-alt { background-color: var(--panel); }
 
+/* Центрированный контейнер содержимого секции */
+.section-inner {
+  max-width: 1344px;
+  margin: 0 auto;
+}
+
 .section > h2,
 .subscribe-info > h2 {
   font-size: 26px;
@@ -567,7 +573,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ---------- Слайдер ---------- */
 
-.slider { max-width: 1200px; }
+.slider { max-width: 100%; }
 
 .slider-viewport { overflow: hidden; }
 
