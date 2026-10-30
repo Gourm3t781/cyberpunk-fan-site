@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CP2077//FAN — фанатский сайт об игре Cyberpunk 2077: гайды, билды, карта районов Night City, персонажи, системные требования и медиа-галерея.">
+  <title>CP2077//FAN — фанатский сайт об игре Cyberpunk 2077</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&amp;family=Rajdhani:wght@500;600;700&amp;family=Share+Tech+Mono&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body id="top">
+
+  <!-- Шапка: логотип, меню с выпадающими пунктами, кнопка, гамбургер -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a class="logo" href="#top">CP2077<span class="logo-accent">//FAN</span></a>
+
+      <!-- Навигация для десктопа (выпадающие меню по наведению) -->
+      <nav class="site-nav" aria-label="Основное меню">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="#top">Главная</a></li>
+          <li class="nav-item has-dd">
+            <a class="nav-link" href="#about">Игра<span class="caret" aria-hidden="true">&#9662;</span></a>
+            <ul class="dd">
+              <li><a href="#about">Об игре</a></li>
+              <li><a href="#characters">Персонажи</a></li>
+              <li><a href="#endings">Концовки</a></li>
+              <li><a href="#sysreq">Системные требования</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dd">
+            <a class="nav-link" href="#districts">Мир<span class="caret" aria-hidden="true">&#9662;</span></a>
+            <ul class="dd">
+              <li><a href="#districts">Районы Night City</a></li>
+              <li><a href="#media">Галерея</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dd">
+            <a class="nav-link" href="#reviews">Сообщество<span class="caret" aria-hidden="true">&#9662;</span></a>
+            <ul class="dd">
+              <li><a href="#reviews">Отзывы прессы</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#subscribe">Подписка</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-solid header-cta" href="#subscribe">Подписаться</a>
+
+      <!-- Гамбургер для мобильного меню -->
+      <button class="burger" type="button" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mmenu">
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Полноэкранное мобильное меню -->
+  <nav class="mmenu" id="mmenu" aria-label="Мобильное меню">
+    <div class="mmenu-head">
+      <span class="logo">CP2077<span class="logo-accent">//FAN</span></span>
+      <button class="mmenu-close" type="button" id="mmenu-close" aria-label="Закрыть меню">&#10005;</button>
+    </div>
+
+    <ul class="mmenu-list">
+      <li><a class="mmenu-link" href="#top">Главная</a></li>
+      <li>
+        <button class="mmenu-toggle" type="button" aria-expanded="false">Игра<span class="caret" aria-hidden="true">&#9662;</span></button>
+        <ul class="mmenu-sub">
+          <li><a class="mmenu-link" href="#about">Об игре</a></li>
+          <li><a class="mmenu-link" href="#characters">Персонажи</a></li>
+          <li><a class="mmenu-link" href="#endings">Концовки</a></li>
+          <li><a class="mmenu-link" href="#sysreq">Системные требования</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="mmenu-toggle" type="button" aria-expanded="false">Мир<span class="caret" aria-hidden="true">&#9662;</span></button>
+        <ul class="mmenu-sub">
+          <li><a class="mmenu-link" href="#districts">Районы Night City</a></li>
+          <li><a class="mmenu-link" href="#media">Галерея</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="mmenu-toggle" type="button" aria-expanded="false">Сообщество<span class="caret" aria-hidden="true">&#9662;</span></button>
+        <ul class="mmenu-sub">
+          <li><a class="mmenu-link" href="#reviews">Отзывы прессы</a></li>
+          <li><a class="mmenu-link" href="#faq">FAQ</a></li>
+          <li><a class="mmenu-link" href="#subscribe">Подписка</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="mmenu-foot">
+      <span class="mono-note">FAN-HUB // NIGHT CITY NET</span>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero с фоновым видео -->
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="video/video-poster.jpg">
+        <source src="video/bg.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="tagline">// Фанатский сайт · не является официальным ресурсом</p>
+        <h1 class="glitch">Cyberpunk <span class="yellow">2077</span></h1>
+        <p class="hero-sub">Night City ждёт: гайды, билды, карта районов и всё об игре — собрано фанатами для фанатов.</p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="#subscribe">Вступить в фан-клуб</a>
+          <a class="btn btn-ghost" href="#media">Смотреть медиа</a>
+        </div>
+
+        <dl class="stats">
+          <div class="stat">
+            <dt>Релиз</dt>
+            <dd>10.12.2020</dd>
+          </div>
+          <div class="stat">
+            <dt>Жанр</dt>
+            <dd>Action / RPG</dd>
+          </div>
+          <div class="stat">
+            <dt>Режим</dt>
+            <dd>Одиночная игра</dd>
+          </div>
+          <div class="stat">
+            <dt>Разработчик</dt>
+            <dd>CD PROJEKT RED</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Об игре -->
+    <section class="section" id="about">
+      <h2>Об игре</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="lead">Cyberpunk 2077 — ролевая игра в открытом мире от CD PROJEKT RED. Действие разворачивается в Night City — мегаполисе будущего штата Калифорния, где власть принадлежит корпорациям, а уличная слава решает всё. Вы играете за наёмника V, в чью голову попал биочип с личностью рок-звезды Джонни Сильверхенда.</p>
+          <ul class="feature-list">
+            <li>Открытый мир с вертикальным геймплеем — мегаполис можно исследовать и сверху, и снизу</li>
+            <li>Нелинейный сюжет с несколькими концовками</li>
+            <li>Глубокая кастомизация персонажа: билды, импланты, стиль</li>
+            <li>Отношения с напарниками и романтические линии</li>
+          </ul>
+        </div>
+        <figure class="poster-frame">
+          <img src="img/poster.jpg" alt="Кадр из игры Cyberpunk 2077: ночной город в неоне" width="1600" height="900">
+          <figcaption class="mono-note">night_city.ext // скриншот из игры</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Разделы сайта -->
+    <section class="section section-alt" id="inside">
+      <h2>Всё об игре в одном месте</h2>
+      <p class="lead">Мы собираем материалы сообщества и собственные гайды, чтобы ваш путь по Night City был проще.</p>
+      <div class="grid grid-3">
+        <article class="card">
+          <span class="icon" aria-hidden="true">&#9646;</span>
+          <h3>Гайды и прохождения</h3>
+          <p>Все основные и побочные квесты, концовки и важные развилки сюжета.</p>
+        </article>
+        <article class="card">
+          <span class="icon" aria-hidden="true">&#9672;</span>
+          <h3>Билды и перки</h3>
+          <p>Сеты имплантов и прокачка под сетку, хакера, ручной бой и скрытность.</p>
+        </article>
+        <article class="card">
+          <span class="icon" aria-hidden="true">&#10022;</span>
+          <h3>Карта районов</h3>
+          <p>Шесть районов Night City: что посмотреть и где искать редкий лут.</p>
+        </article>
+        <article class="card">
+          <span class="icon" aria-hidden="true">&#8984;</span>
+          <h3>Скрытые истории</h3>
+          <p>Пасхалки, отсылки и секреты, которые легко пропустить при первом прохождении.</p>
+        </article>
+        <article class="card">
+          <span class="icon" aria-hidden="true">&#9834;</span>
+          <h3>Моды и тюнинг</h3>
+          <p>Подборка модификаций и настройка графики под слабые и мощные ПК.</p>
+        </article>
+        <article class="card">
+          <span class="icon" aria-hidden="true">&#9635;</span>
+          <h3>Медиа-галерея</h3>
+          <p>Скриншоты сообщества, арты и лучшие кадры из игры в одном месте.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Районы -->
+    <section class="section" id="districts">
+      <h2>Районы Night City</h2>
+      <p class="lead">Город разделён на шесть ключевых районов — у каждого свои банды, стиль и опасности.</p>
+      <div class="grid grid-3">
+        <div class="district d1">
+          <div class="district-name"><b>City Center</b><span>Корпоративное сердце города</span></div>
+        </div>
+        <div class="district d2">
+          <div class="district-name"><b>Watson</b><span>Кварталы иммигрантов и рынки</span></div>
+        </div>
+        <div class="district d3">
+          <div class="district-name"><b>Westbrook</b><span>Гламур, ночные клубы, Шарлотта-стрит</span></div>
+        </div>
+        <div class="district d4">
+          <div class="district-name"><b>Heywood</b><span>Спальные районы и банды Вальядолид</span></div>
+        </div>
+        <div class="district d5">
+          <div class="district-name"><b>Santo Domingo</b><span>Промзона и энергоустановки</span></div>
+        </div>
+        <div class="district d6">
+          <div class="district-name"><b>Pacifica</b><span>Заброшенный курорт и Voodoo Boys</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Персонажи -->
+    <section class="section section-alt" id="characters">
+      <h2>Ключевые персонажи</h2>
+      <p class="lead">Те, кто определяет историю V — напарники, легенды и случайные союзники.</p>
+      <div class="grid grid-4">
+        <article class="card char">
+          <div class="ava ava-1" aria-hidden="true">V</div>
+          <h3>V</h3>
+          <p class="role">протагонист</p>
+          <p>Наёмник, в голове которого оказался биочип с Джонни.</p>
+        </article>
+        <article class="card char">
+          <div class="ava ava-2" aria-hidden="true">JS</div>
+          <h3>Джонни Сильверхенд</h3>
+          <p class="role">рокер-легенда</p>
+          <p>Цифровой призрак 2023 года, оживлённый на биочипе.</p>
+        </article>
+        <article class="card char">
+          <div class="ava ava-3" aria-hidden="true">JW</div>
+          <h3>Джеки Уэллс</h3>
+          <p class="role">напарник</p>
+          <p>Лучший друг V, мечтающий пробиться в верхушку Night City.</p>
+        </article>
+        <article class="card char">
+          <div class="ava ava-4" aria-hidden="true">PP</div>
+          <h3>Панам Палмер</h3>
+          <p class="role">кочевница</p>
+          <p>Бывший член клана Альдекальдо, ключ к сюжетной линии пустошей.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Концовки -->
+    <section class="section" id="endings">
+      <h2>Концовки</h2>
+      <p class="lead">Пять путей финала — без спойлеров: только названия и то, от чего они зависят.</p>
+      <div class="grid grid-4">
+        <article class="card ending">
+          <p class="ending-tag mono-note">path_01</p>
+          <h3>Звезда</h3>
+          <p>Финал с кланом Альдекальдо — открывается через линию Панам.</p>
+        </article>
+        <article class="card ending">
+          <p class="ending-tag mono-note">path_02</p>
+          <h3>Солнце</h3>
+          <p>Путь «Королевы Night City» — зависит от отношений с Джонни и Рог.</p>
+        </article>
+        <article class="card ending">
+          <p class="ending-tag mono-note">path_03</p>
+          <h3>Умеренность</h3>
+          <p>Тихий финал с Ханако Арасакой и корпоративным выбором.</p>
+        </article>
+        <article class="card ending">
+          <p class="ending-tag mono-note">path_04</p>
+          <h3>Дьявол</h3>
+          <p>Секретный вариант, для которого нужно выполнить особые условия в сюжете.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Системные требования -->
+    <section class="section section-alt" id="sysreq">
+      <h2>Системные требования</h2>
+      <p class="lead">Проверьте, потянет ли ваш ПК Night City после патчей 2.x.</p>
+      <div class="table-wrap">
+        <table class="sys-table">
+          <caption class="visually-hidden">Минимальные и рекомендуемые системные требования Cyberpunk 2077</caption>
+          <thead>
+            <tr>
+              <th scope="col">Параметр</th>
+              <th scope="col">Минимальные</th>
+              <th scope="col">Рекомендуемые</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Операционная система</th>
+              <td>Windows 10 64-bit</td>
+              <td>Windows 10 / 11 64-bit</td>
+            </tr>
+            <tr>
+              <th scope="row">Процессор</th>
+              <td>Core i7-6700 / Ryzen 5 1600</td>
+              <td>Core i7-12700 / Ryzen 7 7800X3D</td>
+            </tr>
+            <tr>
+              <th scope="row">Оперативная память</th>
+              <td>12 ГБ</td>
+              <td>16 ГБ</td>
+            </tr>
+            <tr>
+              <th scope="row">Видеокарта</th>
+              <td>GeForce GTX 1060 6 ГБ</td>
+              <td>GeForce RTX 2070 SUPER / RX 5700 XT</td>
+            </tr>
+            <tr>
+              <th scope="row">Накопитель</th>
+              <td>SSD, 70 ГБ</td>
+              <td>NVMe SSD, 70 ГБ</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Медиа-галерея (слайдер) -->
+    <section class="section" id="media">
+      <h2>Медиа-галерея</h2>
+      <p class="lead">Скриншоты из фоторежима игры, снятые для фан-клуба.</p>
+
+      <div class="slider" id="slider">
+        <div class="slider-viewport" role="region" aria-label="Галерея скриншотов">
+          <div class="slider-track" id="slider-track">
+            <figure class="slide"><img src="img/gallery-01.jpg" alt="Скриншот Cyberpunk 2077: улицы Night City" loading="lazy" width="1600" height="900"></figure>
+            <figure class="slide"><img src="img/gallery-02.jpg" alt="Скриншот Cyberpunk 2077: ночной мегаполис" loading="lazy" width="1600" height="900"></figure>
+            <figure class="slide"><img src="img/gallery-03.jpg" alt="Скриншот Cyberpunk 2077: неон и реклама" loading="lazy" width="1600" height="900"></figure>
+            <figure class="slide"><img src="img/gallery-04.jpg" alt="Скриншот Cyberpunk 2077: вид на город" loading="lazy" width="1600" height="900"></figure>
+            <figure class="slide"><img src="img/gallery-05.jpg" alt="Скриншот Cyberpunk 2077: сцена из игры" loading="lazy" width="1600" height="900"></figure>
+            <figure class="slide"><img src="img/gallery-06.jpg" alt="Скриншот Cyberpunk 2077: транспорта и улицы" loading="lazy" width="1600" height="900"></figure>
+            <figure class="slide"><img src="img/gallery-07.jpg" alt="Скриншот Cyberpunk 2077: атмосферный кадр" loading="lazy" width="1600" height="900"></figure>
+            <figure class="slide"><img src="img/gallery-08.jpg" alt="Скриншот Cyberpunk 2077: панорама района" loading="lazy" width="1600" height="900"></figure>
+            <figure class="slide"><img src="img/gallery-09.jpg" alt="Скриншот Cyberpunk 2077: огни ночной улицы" loading="lazy" width="1600" height="900"></figure>
+            <figure class="slide"><img src="img/gallery-10.jpg" alt="Скриншот Cyberpunk 2077: вид сверху на Night City" loading="lazy" width="1600" height="900"></figure>
+            <figure class="slide"><img src="img/gallery-11.jpg" alt="Скриншот Cyberpunk 2077: неоновая витрина" loading="lazy" width="1600" height="900"></figure>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-arrow" type="button" id="slider-prev" aria-label="Предыдущий слайд">&#8592;</button>
+          <div class="slider-dots" id="slider-dots"></div>
+          <button class="slider-arrow" type="button" id="slider-next" aria-label="Следующий слайд">&#8594;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="section section-alt" id="reviews">
+      <h2>Оценки прессы и игроков</h2>
+      <div class="grid grid-3">
+        <div class="card review">
+          <p class="score">86<span class="score-max">/100</span></p>
+          <p class="review-src mono-note">metacritic.com · PC</p>
+          <p>Сводная оценка критиков на релизе и после обновлений.</p>
+        </div>
+        <div class="card review">
+          <p class="score">9<span class="score-max">/10</span></p>
+          <p class="review-src mono-note">игровые издания</p>
+          <p>«После патча 2.0 это та игра, которой она должна была быть».</p>
+        </div>
+        <div class="card review">
+          <p class="score">80<span class="score-max">%</span></p>
+          <p class="review-src mono-note">steam · отзывы</p>
+          <p>«Очень положительные» отзывы игроков в Steam.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <h2>FAQ</h2>
+      <p class="lead">Частые вопросы о сайте и об игре.</p>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3 class="faq-q">
+            <button class="faq-btn" type="button" aria-expanded="false">
+              Это официальный сайт Cyberpunk 2077?
+              <span class="faq-sign" aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="faq-a">
+            <p>Нет. Это фанатский учебный проект. Официальные ресурсы игры — cdprojektred.com и cyberpunk.net.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q">
+            <button class="faq-btn" type="button" aria-expanded="false">
+              Где купить или скачать игру?
+              <span class="faq-sign" aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="faq-a">
+            <p>Игра продаётся в Steam, GOG, Epic Games Store и на консолях. Ссылок на пиратство мы не размещаем.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q">
+            <button class="faq-btn" type="button" aria-expanded="false">
+              Помогаете ли с прохождением?
+              <span class="faq-sign" aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="faq-a">
+            <p>Да, в разделе «Гайды» — разборы квестов, билдов и концовок. Вопросы можно задать через форму подписки.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q">
+            <button class="faq-btn" type="button" aria-expanded="false">
+              Можно ли прислать свой арт, скриншот или гайд?
+              <span class="faq-sign" aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="faq-a">
+            <p>Конечно! Отправьте через форму ниже — лучшие материалы попадают в галерею с указанием автора.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q">
+            <button class="faq-btn" type="button" aria-expanded="false">
+              Какие моды вы рекомендуете?
+              <span class="faq-sign" aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="faq-a">
+            <p>В разделе «Моды и тюнинг» — проверенные подборки для графики, геймплея и интерфейса.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Подписка -->
+    <section class="section section-subscribe" id="subscribe">
+      <div class="subscribe-grid">
+        <div class="subscribe-info">
+          <h2>Подпишись на новости фан-клуба</h2>
+          <p class="lead">Свежие гайды, обновления игры и лучшие материалы сообщества — раз в две недели, без спама.</p>
+        </div>
+
+        <form class="subscribe-form" id="subscribe-form" action="https://formcarry.com/s/nw6Sd5knS17" method="POST">
+          <div class="form-field">
+            <label for="field-name">Ваше имя</label>
+            <input class="inp" type="text" id="field-name" name="name" placeholder="Вай V" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="field-email">Ваш e-mail</label>
+            <input class="inp" type="email" id="field-email" name="email" placeholder="v@nightcity.net" autocomplete="email" required>
+          </div>
+          <div class="form-field">
+            <label for="field-msg">Сообщение <span class="optional">(необязательно)</span></label>
+            <textarea class="inp" id="field-msg" name="message" rows="3" placeholder="Вопрос, идея или свой скриншот..."></textarea>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="field-policy" name="policy" required>
+            <label for="field-policy">Согласен на обработку персональных данных и получение рассылки</label>
+          </div>
+          <button class="btn btn-solid btn-submit" type="submit" id="form-submit">Отправить</button>
+          <p class="form-status mono-note" id="form-status" role="alert"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Подвал -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo">CP2077<span class="logo-accent">//FAN</span></span>
+        <p class="mono-note">fan project, 2026 · Бычков Никита</p>
+      </div>
+      <p class="disclaimer">Cyberpunk 2077 © CD PROJEKT S.A. Все права на название, игру и её материалы принадлежат правообладателям. Сайт создан фанатами в учебных целях и не является официальным ресурсом. Скриншоты и видео записаны автором в фоторежиме игры.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
