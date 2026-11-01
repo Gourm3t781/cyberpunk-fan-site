@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const autoDelay = 5000;
 
         let perView = 1;
-        let pageCount = 1;
+        let positionCount = 1;
         let currentPage = 0;
         let autoTimer = null;
 
@@ -128,14 +128,14 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         const goToPage = function (page) {
-            const maxPage = pageCount - 1;
+            const maxPosition = positionCount - 1;
 
             currentPage = page;
 
             if (currentPage < 0) {
-                currentPage = maxPage;
+                currentPage = maxPosition;
             }
-            if (currentPage > maxPage) {
+            if (currentPage > maxPosition) {
                 currentPage = 0;
             }
 
@@ -155,15 +155,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const buildDots = function () {
             dotsBox.textContent = "";
 
-            const pages = [];
+            const positions = [];
 
             let index = 0;
-            while (index < pageCount) {
-                pages.push(index);
+            while (index < positionCount) {
+                positions.push(index);
                 index = index + 1;
             }
 
-            pages.forEach(function (pageNumber) {
+            positions.forEach(function (pageNumber) {
                 const dot = document.createElement("button");
 
                 dot.type = "button";
@@ -185,10 +185,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const layout = function () {
             perView = calcPerView();
-            pageCount = Math.ceil(slides.length / perView);
+            positionCount = slides.length - perView + 1;
 
-            if (currentPage > pageCount - 1) {
-                currentPage = pageCount - 1;
+            if (currentPage > positionCount - 1) {
+                currentPage = positionCount - 1;
             }
 
             buildDots();
