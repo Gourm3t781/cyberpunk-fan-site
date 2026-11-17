@@ -19,6 +19,9 @@ HTML5, CSS3, ванильный JavaScript. Шрифты: Montserrat, Rajdhani, 
 
 Скриншоты и видеозапись сделаны автором в фоторежиме игры.
 
+## Ссылка на фанатский сайт
+https://gourm3t781.github.io/cyberpunk-fan-site/
+
 ---
 
 Автор: Бычков Никита, 2026.
